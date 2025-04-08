@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, 
+      #d52d00, #ef7627, #ff9a56, 
+      #ffffff, 
+      #d362a4, #b55690, #a30262);
+    background-attachment: fixed;
+  }
+  
+  .container {
+    padding: 10px;
+   
+  }
+  
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: #a30262;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #a30262;
+    transition: transform 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Balões */
+  .baloes-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .balao {
+    background-color: rgba(255,255,255,0.9);
+    color: #a30262;
+    width: 100px;
+    height: 140px;
+    border-radius: 50% 50% 45% 45%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .balao:hover {
+    transform: scale(1.1);
+  }
+  
+  .balao.estourado {
+    background-color: transparent;
+    border: 2px dashed white;
+    color: white;
+  }
+  
+  .balao::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: white;
+  }
+  
+  /* Responsividade */
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  
+    .balao {
+      width: 80px;
+      height: 110px;
+      font-size: 0.8em;
+    }
+  }
+  
